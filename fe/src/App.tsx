@@ -1,7 +1,13 @@
+import router from "@/router";
+import { RouterProvider } from "react-router";
+import { ThemeProvider } from "./components/ThemeProvider";
+
 function App() {
     return (
         <>
-            <h1 className="bg-green-500">Trello Web</h1>
+            <ThemeProvider defaultTheme="dark" storageKey="board-flow-theme">
+                <RouterProvider router={router} />
+            </ThemeProvider>
         </>
     );
 }
