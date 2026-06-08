@@ -22,80 +22,82 @@ import {
 
 function BoardBar() {
   return (
-    <div className="container mx-auto px-4 py-2.5">
-      <div className="flex items-center justify-between">
-        {/* Left */}
-        <div className="flex items-center gap-x-2">
-          <Button variant="ghost">
-            <AlignEndHorizontal />
-            BoardFlow MERN stack board
-          </Button>
-          <Button variant="ghost">
-            <GlobeLock />
-            Public/Private Workspace
-          </Button>
-          <Button variant="ghost">
-            <GoogleDrive className="size-5 fill-current" />
-            Add to Google Drive
-          </Button>
-          <Button variant="ghost">
-            <Zap />
-            Automation
-          </Button>
-          <Button variant="ghost">
-            <Funnel />
-            Filter
-          </Button>
-        </div>
+    <div className="flex h-(--board-bar-height) items-center border-b border-border/80">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between">
+          {/* Left */}
+          <div className="-ml-2.5 flex items-center gap-x-2">
+            <Button variant="ghost">
+              <AlignEndHorizontal />
+              BoardFlow MERN stack board
+            </Button>
+            <Button variant="ghost">
+              <GlobeLock />
+              Public/Private Workspace
+            </Button>
+            <Button variant="ghost">
+              <GoogleDrive className="size-5 fill-current" />
+              Add to Google Drive
+            </Button>
+            <Button variant="ghost">
+              <Zap />
+              Automation
+            </Button>
+            <Button variant="ghost">
+              <Funnel />
+              Filter
+            </Button>
+          </div>
 
-        {/* Right */}
-        <div className="flex items-center gap-x-2">
-          {/* Invite button */}
-          <Button size="lg" className="px-4">
-            <UserPlus />
-            Invite
-          </Button>
+          {/* Right */}
+          <div className="flex items-center gap-x-2">
+            {/* Invite button */}
+            <Button size="lg" className="px-4">
+              <UserPlus />
+              Invite
+            </Button>
 
-          {/* Avatar Group */}
-          <AvatarGroup className="">
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Avatar>
-                  <AvatarImage
-                    src="https://github.com/shadcn.png"
-                    alt="@shadcn"
-                  />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-              </TooltipTrigger>
-              <TooltipContent side="bottom">shadcn</TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Avatar>
-                  <AvatarImage
-                    src="https://github.com/maxleiter.png"
-                    alt="@maxleiter"
-                  />
-                  <AvatarFallback>LR</AvatarFallback>
-                </Avatar>
-              </TooltipTrigger>
-              <TooltipContent side="bottom">maxleiter</TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Avatar>
-                  <AvatarImage
-                    src="https://github.com/evilrabbit.png"
-                    alt="@evilrabbit"
-                  />
-                  <AvatarFallback>ER</AvatarFallback>
-                </Avatar>
-              </TooltipTrigger>
-              <TooltipContent side="bottom">evilrabbit</TooltipContent>
-            </Tooltip>
-            <AvatarGroupCount>+3</AvatarGroupCount>
-          </AvatarGroup>
+            {/* Avatar Group */}
+            <AvatarGroup className="">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Avatar>
+                    <AvatarImage
+                      src="https://github.com/shadcn.png"
+                      alt="@shadcn"
+                    />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </TooltipTrigger>
+                <TooltipContent side="bottom">shadcn</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Avatar>
+                    <AvatarImage
+                      src="https://github.com/maxleiter.png"
+                      alt="@maxleiter"
+                    />
+                    <AvatarFallback>LR</AvatarFallback>
+                  </Avatar>
+                </TooltipTrigger>
+                <TooltipContent side="bottom">maxleiter</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Avatar>
+                    <AvatarImage
+                      src="https://github.com/evilrabbit.png"
+                      alt="@evilrabbit"
+                    />
+                    <AvatarFallback>ER</AvatarFallback>
+                  </Avatar>
+                </TooltipTrigger>
+                <TooltipContent side="bottom">evilrabbit</TooltipContent>
+              </Tooltip>
+              <AvatarGroupCount>+3</AvatarGroupCount>
+            </AvatarGroup>
+          </div>
         </div>
       </div>
     </div>
