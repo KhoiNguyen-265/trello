@@ -1,12 +1,15 @@
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import router from "@/router";
 import { RouterProvider } from "react-router";
-import { ThemeProvider } from "./components/ThemeProvider";
 
 function App() {
     return (
         <>
-            <ThemeProvider defaultTheme="dark" storageKey="board-flow-theme">
-                <RouterProvider router={router} />
+            <ThemeProvider defaultTheme="dark" storageKey="flowboard-theme">
+                <TooltipProvider>
+                    <RouterProvider router={router} />
+                </TooltipProvider>
             </ThemeProvider>
         </>
     );

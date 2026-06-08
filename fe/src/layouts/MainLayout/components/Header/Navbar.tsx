@@ -19,7 +19,7 @@ function Navbar() {
                             {menu.trigger}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ul className="w-90 p-2 grid gap-1">
+                            <ul className="w-90 p-2 grid">
                                 {menu.items.map((item, itemIdx) => (
                                     <li key={itemIdx}>
                                         <NavigationMenuLink

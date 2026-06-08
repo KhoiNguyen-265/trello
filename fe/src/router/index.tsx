@@ -1,5 +1,5 @@
 import MainLayout from "@/layouts/MainLayout";
-import Home from "@/pages/Home";
+import Boards from "@/pages/Boards";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -8,7 +8,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home />,
+                element: <Boards />,
             },
         ],
     },

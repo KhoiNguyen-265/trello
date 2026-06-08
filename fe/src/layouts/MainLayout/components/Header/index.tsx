@@ -31,7 +31,7 @@ import Navbar from "./Navbar";
 function Header() {
     return (
         <>
-            <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/75 backdrop-blur-md py-2.5 transition-all duration-300 shadow-xs">
+            <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/75 backdrop-blur-md py-2.5 transition-all duration-300 shadow-xs">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center justify-between">
                         {/* Left */}
@@ -58,7 +58,7 @@ function Header() {
                             {/* Action */}
                             <Button
                                 size="lg"
-                                className="min-w-[120px] hover:bg-primary/5 hover:text-primary hover:border-primary transition-all duration-300"
+                                className="px-4 hover:bg-primary/5 hover:text-primary hover:border-primary transition-all duration-300"
                             >
                                 Create +
                             </Button>
@@ -85,7 +85,7 @@ function Header() {
                             <Button
                                 size="icon-lg"
                                 variant="outline"
-                                className="hover:bg-primary/5 hover:text-primary hover:border-primary transition-all duration-300 text-foreground/75 rounded-full"
+                                className="text-foreground/75 rounded-full"
                             >
                                 <BellIcon className="size-[1.2rem]" />
                             </Button>
@@ -94,7 +94,7 @@ function Header() {
                             <Button
                                 size="icon-lg"
                                 variant="outline"
-                                className="hover:bg-primary/5 hover:text-primary hover:border-primary transition-all duration-300 text-foreground/75 rounded-full"
+                                className="text-foreground/75 rounded-full"
                             >
                                 <BadgeQuestionMark className="size-[1.2rem]" />
                             </Button>
