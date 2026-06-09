@@ -1,4 +1,4 @@
-import logo from "@/assets/svg/logo.svg";
+import Logo from "@/components/Logo";
 import ModeToggle from "@/components/ModeToggle";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -25,49 +25,44 @@ import {
   LogOutIcon,
   SearchIcon,
 } from "lucide-react";
-import { Link } from "react-router";
+import MobileMenu from "./MobileMenu";
 import Navbar from "./Navbar";
 
 function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 flex h-(--header-height) w-full items-center border-b border-border/80 bg-background/75 shadow-xs backdrop-blur-md transition-all duration-300">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
+        <div className="w-full px-4 py-2">
+          <div className="flex items-center justify-between gap-2">
             {/* Left */}
-            <div className="flex items-center gap-4">
-              <Grip className="size-5 cursor-pointer text-muted-foreground transition-all duration-300 hover:rotate-90 hover:text-foreground" />
+            <div className="flex items-center gap-2 xl:gap-4">
+              <Grip className="hidden size-5 cursor-pointer text-muted-foreground transition-all duration-300 hover:rotate-90 hover:text-foreground xl:inline-block" />
+
+              {/* Mobile Menu */}
+              <MobileMenu />
 
               {/* Logo */}
-              <Link to={"/"} className="group/logo">
-                <div className="flex items-center gap-1.5">
-                  <img
-                    className="size-8 transition-transform duration-500 ease-out group-hover/logo:scale-110 group-hover/logo:rotate-12"
-                    src={logo}
-                    alt="FlowBoard"
-                  />
-                  <span className="bg-linear-to-r from-primary to-cyan-500 bg-clip-text text-xl font-extrabold tracking-tight text-transparent">
-                    FlowBoard
-                  </span>
-                </div>
-              </Link>
+              <Logo />
 
               {/* Navbar */}
-              <Navbar />
+              <div className="ml-4 hidden items-center lg:flex">
+                <Navbar />
+              </div>
 
               {/* Action */}
               <Button
                 size="lg"
-                className="px-4 transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary"
+                className="hidden px-4 transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary sm:inline-flex"
               >
-                Create +
+                <span className="lg:hidden xl:inline">Create +</span>
+                <span className="hidden lg:inline xl:hidden">Create</span>
               </Button>
             </div>
 
             {/* Right */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 xl:ml-5 xl:gap-2">
               {/* Search Input */}
-              <Field className="max-w-sm">
+              <Field className="hidden max-w-xs min-w-45 md:flex lg:max-w-[150px] xl:max-w-xs xl:min-w-50">
                 <InputGroup className="bg-background/50">
                   <InputGroupInput
                     id="inline-start-input"
@@ -94,7 +89,7 @@ function Header() {
               <Button
                 size="icon-lg"
                 variant="outline"
-                className="rounded-full text-foreground/75"
+                className="hidden rounded-full text-foreground/75 sm:inline-flex"
               >
                 <BadgeQuestionMark className="size-[1.2rem]" />
               </Button>

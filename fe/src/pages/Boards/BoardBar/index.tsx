@@ -23,7 +23,7 @@ import {
 function BoardBar() {
   return (
     <div className="flex h-(--board-bar-height) items-center border-b border-border/80">
-      <div className="container mx-auto px-4">
+      <div className="w-full overflow-x-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Left */}
           <div className="-ml-2.5 flex items-center gap-x-2">

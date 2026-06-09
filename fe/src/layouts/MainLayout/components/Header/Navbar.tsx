@@ -12,7 +12,7 @@ import { menuConfig } from "./config";
 function Navbar() {
   return (
     <NavigationMenu viewport={false}>
-      <NavigationMenuList className="gap-1">
+      <NavigationMenuList className="ml-2 xl:ml-4 xl:gap-x-1.5">
         {menuConfig.map((menu, index) => (
           <NavigationMenuItem key={index}>
             <NavigationMenuTrigger>{menu.trigger}</NavigationMenuTrigger>
