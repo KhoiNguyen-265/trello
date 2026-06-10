@@ -12,6 +12,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { capitalizeFirstLetter } from "@/utils/formatters";
 import {
   AlignEndHorizontal,
   Funnel,
@@ -20,7 +21,7 @@ import {
   Zap,
 } from "lucide-react";
 
-function BoardBar() {
+function BoardBar({ board }) {
   return (
     <div className="flex h-(--board-bar-height) items-center border-b border-border/80">
       <div className="w-full overflow-x-auto px-4 py-2">
@@ -29,11 +30,11 @@ function BoardBar() {
           <div className="-ml-2.5 flex items-center gap-x-2">
             <Button variant="ghost">
               <AlignEndHorizontal />
-              BoardFlow MERN stack board
+              {board.title}
             </Button>
             <Button variant="ghost">
               <GlobeLock />
-              Public/Private Workspace
+              {capitalizeFirstLetter(board.type)}
             </Button>
             <Button variant="ghost">
               <GoogleDrive className="size-5 fill-current" />

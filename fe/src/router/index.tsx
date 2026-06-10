@@ -1,5 +1,5 @@
 import MainLayout from "@/layouts/MainLayout";
-import Boards from "@/pages/Boards";
+import Boards from "@/pages/Boards/Boards";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
