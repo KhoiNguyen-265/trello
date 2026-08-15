@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
+import type { IColumn } from "@/types/board";
 import { FilePlusCorner } from "lucide-react";
 import Column from "./Column/Column";
 
-function ListColumns({ columns }) {
+function ListColumns({ columns }: { columns: IColumn[] }) {
   return (
     <>
       <div className="flex h-full w-full overflow-x-auto overflow-y-hidden bg-inherit">
@@ -10,7 +11,7 @@ function ListColumns({ columns }) {
           <Column key={column._id} column={column} />
         ))}
 
-        <div className="ml-2 flex h-fit w-[200px] shrink-0 flex-col rounded-xl pt-3 pr-1.5 pb-3">
+        <div className="ml-2 flex h-fit w-[200px] shrink-0 flex-col rounded-xl">
           <Button>
             <FilePlusCorner />
             Add new Column
